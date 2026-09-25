@@ -6,7 +6,7 @@ text = Path("Dockerfile").read_text(encoding="utf-8")
 issues = []
 
 if not re.search(r"(?mi)^USER\s+\S+", text):
-    issues.append("Dockerfile no declara un usuario de ejecuci¢n")
+    issues.append("Dockerfile no declara un usuario de ejecucion")
 
 if re.search(r"(?mi)^USER\s+root\s*$", text):
     issues.append("El usuario final del contenedor es root")
