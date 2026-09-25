@@ -1,12 +1,13 @@
-import os
+
 import os
 from flask import Flask, jsonify
 
 app = Flask(__name__)
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 @app.route("/")
-def index():
-    return jsonify({"app": "InventoryHub", "message": "TechStore Inventory Hub operativo"}), 200
+def home():
+    return jsonify(app="InventoryHub", version="2.0.0")
 
 @app.get("/health")
 def health():
