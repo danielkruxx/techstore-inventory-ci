@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return jsonify({"message": "TechStore Inventory Hub operativo"}), 200
+    return jsonify({"app": "InventoryHub", "message": "TechStore Inventory Hub operativo"}), 200
 
 @app.get("/health")
 def health():
